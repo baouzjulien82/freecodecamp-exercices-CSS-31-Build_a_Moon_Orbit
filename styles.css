@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 1px solid;
+  /* border: 1px solid; */
 }
 
 body {
@@ -10,6 +10,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: black;
 }
 
 .space {
@@ -17,38 +18,44 @@ body {
   height: 200px;
   margin: auto;
   position: relative;
-  background-color: rgb(72, 72, 72);
+  background-color: black;
 }
 
 .earth {
-  height: 100px;
-  width: 100px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg");
+  background-size: cover;
+  background-position: center;
   border-radius: 50%;
-  background-color: blue;
+  box-shadow: 0 0 15px rgba(0, 150, 255, 0.6);
 }
 
 .orbit {
-  width: 200px;
+  width: 300px;
   height: 200px;
   position: absolute;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  animation: orbit 5s linear infinite;
+  animation: orbit 10s linear infinite;
 }
 
-.moon{
+.moon {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 30px;
-  height: 30px; 
+  width: 50px;
+  height: 50px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg");
+  background-size: cover;
+  background-position: center;
   border-radius: 50%;
-  background-color: white;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
 }
 
 @keyframes orbit {
